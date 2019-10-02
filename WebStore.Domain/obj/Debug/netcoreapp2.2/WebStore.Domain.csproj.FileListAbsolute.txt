@@ -1,0 +1,9 @@
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\bin\Debug\netcoreapp2.2\WebStore.Domain.deps.json
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\bin\Debug\netcoreapp2.2\WebStore.Domain.dll
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\bin\Debug\netcoreapp2.2\WebStore.Domain.pdb
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.csproj.CoreCompileInputs.cache
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.AssemblyInfoInputs.cache
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.AssemblyInfo.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.dll
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.pdb
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore.Domain\obj\Debug\netcoreapp2.2\WebStore.Domain.csprojAssemblyReference.cache
