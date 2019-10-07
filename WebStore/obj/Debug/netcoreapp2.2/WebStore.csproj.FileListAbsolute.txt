@@ -55,3 +55,5 @@ C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\WebStore.pdb
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Partial\_Advertisement.cshtml.g.cs
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\Brands\Default.cshtml.g.cs
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\LoginLogout\Default.cshtml.g.cs
