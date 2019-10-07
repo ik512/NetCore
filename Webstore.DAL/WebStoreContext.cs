@@ -5,7 +5,7 @@ using WebStore.DomainNew.Entities;
 
 namespace Webstore.DAL
 {
-    public class WebStoreContext:DbContext
+    public class WebStoreContext:IdentityDbContext<User>
     {
         public WebStoreContext(DbContextOptions options ) :base(options)
         {

@@ -7,6 +7,8 @@ using WebStore.Infrastructure.Interfaces;
 using WebStore.Services;
 using Microsoft.EntityFrameworkCore;
 using Webstore.DAL;
+using WebStore.DomainNew.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebStore
 {
@@ -29,7 +31,25 @@ namespace WebStore
             services.AddSingleton<IEmployeeService, EmployeeService>();
             services.AddDbContext<WebStoreContext>(options=>options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")));
-        }
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<WebStoreContext>()
+                .AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(o =>
+            {
+                o.Password.RequiredLength = 3;
+                o.Password.RequireDigit = false;
+                o.Password.RequireLowercase = false;
+                o.Password.RequireUppercase = false;
+                o.Password.RequireNonAlphanumeric = false;
+
+                o.User.RequireUniqueEmail = true;
+            });
+
+            services.ConfigureApplicationCookie(o =>
+            {
+                o.Cookie.Expiration = System.TimeSpan.FromDays(100);
+            });
+        } 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         //Настройки приложения---------->
