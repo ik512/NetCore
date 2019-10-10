@@ -1,63 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WebStore.Infrastructure;
 
 namespace WebStore.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public HomeController()
         {
-            return View();
+
         }
 
-        public IActionResult _404()
+        //[SimpleActionFilter]
+        public IActionResult Index()
         {
-        return View();
+            //throw new Exception("Упс! Что-то пошло не так");
+
+            //return StatusCode(403);
+            //return new RedirectResult("https://google.com");
+            //return new RedirectToActionResult("Blog", "home", null);
+            //return new JsonResult("{'key': 'value'}");
+            //return NotFound(); // return new NotFoundResult();
+            //return new EmptyResult();
+            //return new ContentResult();
+
+            return View();
         }
 
         public IActionResult Blog()
         {
             return View();
         }
-
-        public IActionResult Blog_single()
-        {
-            return View();
-        }
-
-        public IActionResult Cart()
-        {
-            return View();
-        }
-
-        public IActionResult Checkout()
-        {
-            return View();
-        }
-
-        public IActionResult Contact_us()
-        {
-            return View();
-        }
-
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult Product_details()
-        {
-            return View();
-        }
-
-        public IActionResult Shop()
-        {
-            return View();
-        }
-
-
     }
 }

@@ -12,22 +12,20 @@ namespace WebStore.Controllers
     public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
-
         private readonly SignInManager<User> _signInManager;
 
-        public AccountController(UserManager<User> userManager,SignInManager<User> signInManager)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
         }
-
-        
 
         [HttpGet]
         public IActionResult Login()
         {
             return View(new LoginViewModel());
         }
+
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
@@ -41,11 +39,11 @@ namespace WebStore.Controllers
 
             if (!loginResult.Succeeded)
             {
-                ModelState.AddModelError("", "вход невозможен");
+                ModelState.AddModelError("", "Вход невозможен");
                 return View(model);
             }
 
-            if (Url.IsLocalUrl(model.RetunUrl)) //если url локальный
+            if (Url.IsLocalUrl(model.RetunUrl)) // если URL локальный
             {
                 return Redirect(model.RetunUrl);
             }
@@ -57,25 +55,29 @@ namespace WebStore.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-           
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View(new RegisterUserViewModel());
+        }
 
-        [HttpPost,ValidateAntiForgeryToken]
+        [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterUserViewModel model)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                return View(model) ;
+                return View(model);
             }
 
             var user = new User { UserName = model.UserName, Email = model.Email };
             var createResult = await _userManager.CreateAsync(user, model.Password);
 
-            if(!createResult.Succeeded)
+            if (!createResult.Succeeded)
             {
-                foreach(var identityError in createResult.Errors)
+                foreach (var identityError in createResult.Errors)
                 {
                     ModelState.AddModelError("", identityError.Description);
                     return View(model);
@@ -83,11 +85,9 @@ namespace WebStore.Controllers
             }
 
             await _signInManager.SignInAsync(user, false);
+            await _userManager.AddToRoleAsync(user, "User"); // добавление пользователя к группе Users
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
-
-
-       
     }
 }

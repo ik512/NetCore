@@ -9,6 +9,9 @@ using Microsoft.EntityFrameworkCore;
 using Webstore.DAL;
 using WebStore.DomainNew.Entities;
 using Microsoft.AspNetCore.Identity;
+using WebStore.Infrastructure.Services;
+using WebStore.Infrastructure.Intefaces;
+using WebStore.Infrastructure.Implementations;
 
 namespace WebStore
 {
@@ -49,6 +52,8 @@ namespace WebStore
             {
                 o.Cookie.Expiration = System.TimeSpan.FromDays(100);
             });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<ICartService, CookieCartService>();
         } 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

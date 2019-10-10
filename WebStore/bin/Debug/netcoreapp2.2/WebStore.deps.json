@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "WebStore/1.0.0": {
         "dependencies": {
+          "BuildBundlerMinifier": "3.0.415",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -40,6 +41,7 @@
           "WebStore.dll": {}
         }
       },
+      "BuildBundlerMinifier/3.0.415": {},
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp": "2.8.0",
@@ -3647,6 +3649,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BuildBundlerMinifier/3.0.415": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vhI32AdG9tdGN4Avtf/7FoH8HV2HwUM03npMaaspaSAqHDuw7SHCM43wppeRFF/364ye1Bapj3xqpVVQen3jbg==",
+      "path": "buildbundlerminifier/3.0.415",
+      "hashPath": "buildbundlerminifier.3.0.415.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

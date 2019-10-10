@@ -4,16 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebStore.Domain.Entities;
 using WebStore.Domain.Filters;
-using WebStore.Infrastructure.Interfaces;
+using WebStore.Infrastructure.Intefaces;
 
-namespace WebStore.Services
+namespace WebStore.Infrastructure.Services
 {
-    public class InMamoryProductService : IProductService
+    public class InMemoryProductService : IProductService
     {
         private readonly List<Category> _categories;
         private readonly List<Brand> _brands;
         private readonly List<Product> _products;
-        public InMamoryProductService()
+
+        public InMemoryProductService()
         {
             _categories = new List<Category>
             {
@@ -227,54 +228,51 @@ namespace WebStore.Services
                     Order = 9,
                     ParentId = null
                 }
-
             };
-            _brands = new List<Brand>
+            _brands = new List<Brand>()
             {
                 new Brand()
                 {
-                    Id=1,
-                    Name="Acne",
-                    Order=0,
+                    Id = 1,
+                    Name = "Acne",
+                    Order = 0
                 },
                 new Brand()
                 {
-                    Id=2,
-                    Name="Grune erde",
-                    Order=1,
+                    Id = 2,
+                    Name = "Grüne Erde",
+                    Order = 1
                 },
                 new Brand()
                 {
-                    Id=3,
-                    Name="Albiro",
-                    Order=2,
+                    Id = 3,
+                    Name = "Albiro",
+                    Order = 2
                 },
                 new Brand()
                 {
-                    Id=4,
-                    Name="Ronhill",
-                    Order=3,
+                    Id = 4,
+                    Name = "Ronhill",
+                    Order = 3
                 },
                 new Brand()
                 {
-                    Id=5,
-                    Name="Oddmolly",
-                    Order=4,
+                    Id = 5,
+                    Name = "Oddmolly",
+                    Order = 4
                 },
                 new Brand()
                 {
-                    Id=6,
-                    Name="Boudestijn",
-                    Order=5,
+                    Id = 6,
+                    Name = "Boudestijn",
+                    Order = 5
                 },
                 new Brand()
                 {
-                    Id=7,
-                    Name="Rosch creative culture",
-                    Order=6,
+                    Id = 7,
+                    Name = "Rösch creative culture",
+                    Order = 6
                 },
-
-
             };
             _products = new List<Product>()
             {
@@ -400,15 +398,17 @@ namespace WebStore.Services
                 },
             };
         }
-        public IEnumerable<Brand> GetBrands()
-        {
-            return _brands;
-        }
 
         public IEnumerable<Category> GetCategories()
         {
             return _categories;
         }
+
+        public IEnumerable<Brand> GetBrands()
+        {
+            return _brands;
+        }
+
         public IEnumerable<Product> GetProducts(ProductFilter filter)
         {
             var products = _products;
@@ -422,8 +422,11 @@ namespace WebStore.Services
                     .ToList();
 
             return products;
+        }
 
+        public Product GetProductById(int id)
+        {
+            return _products.FirstOrDefault(p => p.Id == id);
         }
     }
-
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebStore.Domain.Filters;
-using WebStore.Infrastructure.Interfaces;
+using WebStore.Infrastructure.Intefaces;
 using WebStore.ViewModels;
 
 namespace WebStore.Controllers
@@ -17,6 +17,7 @@ namespace WebStore.Controllers
         {
             _productService = productService;
         }
+
         public IActionResult Shop(int? CategoryId, int? brandId)
         {
             // получаем список отфильтрованных продуктов
@@ -34,14 +35,29 @@ namespace WebStore.Controllers
                     ImageUrl = p.ImageUrl,
                     Name = p.Name,
                     Order = p.Order,
-                    Price = p.Price
+                    Price = p.Price,
+                    BrandName = p.Brand?.Name ?? string.Empty
                 }).OrderBy(p => p.Order).ToList()
             };
+
             return View(model);
         }
-            public IActionResult Product_details()
+
+        public IActionResult ProductDetails(int id)
         {
-            return View();
+            var product = _productService.GetProductById(id);
+            if (product == null)
+                return NotFound();
+
+            return View(new ProductViewModel
+            {
+                Id = product.Id,
+                ImageUrl = product.ImageUrl,
+                Name = product.Name,
+                Order = product.Order,
+                Price = product.Price,
+                BrandName = product.Brand?.Name ?? string.Empty
+            });
         }
     }
 }

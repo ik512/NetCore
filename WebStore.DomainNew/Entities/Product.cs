@@ -4,6 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using WebStore.Domain.Entities.Base;
 using WebStore.Domain.Entities.Base.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
+using WebStore.Domain.Entities.Base;
+using WebStore.Domain.Entities.Base.Interfaces;
 
 namespace WebStore.Domain.Entities
 {
@@ -16,7 +22,6 @@ namespace WebStore.Domain.Entities
         public decimal Price { get; set; }
         //public string Manufacturer { get; set; }
         public int CategoryId { get; set; }
-       // public string Manufacturer { get; set; }
 
         [ForeignKey("CategoryId")] // не обязательный
         public virtual Category Category { get; set; }
