@@ -32,8 +32,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\Webstore.DomainNew\\Webstore.DomainNew.csproj": {
-                "projectPath": "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\Webstore.DomainNew\\Webstore.DomainNew.csproj"
+              "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\WebStore.DomainNew\\WebStore.DomainNew.csproj": {
+                "projectPath": "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\WebStore.DomainNew\\WebStore.DomainNew.csproj"
               }
             }
           }

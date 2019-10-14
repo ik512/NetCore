@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Webstore.DAL;
+using WebStore.DAL;
 
 namespace WebStore
 {
@@ -26,7 +27,7 @@ namespace WebStore
                 {
                     WebStoreContext context = services.GetRequiredService<WebStoreContext>();
                     DbInitializer.Initialize(context);
-                    
+                    DbInitializer.InitializeUsers(services);
                 }
                 catch (Exception ex)
                 {

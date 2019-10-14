@@ -32,8 +32,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\Webstore.DomainNew\\Webstore.DomainNew.csproj": {
-                "projectPath": "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\Webstore.DomainNew\\Webstore.DomainNew.csproj"
+              "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\WebStore.DomainNew\\WebStore.DomainNew.csproj": {
+                "projectPath": "C:\\ПРОЕКТЫ_VISUAL_ASP_NET\\WebStore.DomainNew\\WebStore.DomainNew.csproj"
               }
             }
           }
@@ -208,6 +208,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[3.0.415, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
