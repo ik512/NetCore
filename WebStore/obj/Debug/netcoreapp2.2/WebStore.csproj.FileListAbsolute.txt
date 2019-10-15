@@ -59,3 +59,8 @@ C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\WebStore.cspro
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\WebStore.dll
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\WebStore.pdb
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\Details.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Home\ProductList.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
