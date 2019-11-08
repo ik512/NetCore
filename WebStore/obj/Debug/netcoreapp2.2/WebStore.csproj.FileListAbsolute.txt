@@ -64,3 +64,5 @@ C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Ad
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\OrderConfirmed.cshtml.g.cs
+C:\ПРОЕКТЫ_VISUAL_ASP_NET\WebStore\obj\Debug\netcoreapp2.2\Razor\Views\Cart\_OrderPartial.cshtml.g.cs
